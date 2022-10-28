@@ -5,35 +5,27 @@
 </head>
 <body>
 
-<iframe id="ztiFrame" allow="camera *;" width="490px" height="590px" title="CardJsCard" src="https://zingtree.com/deploy/tree.php?tree_id=526304251" scrolling="yes" frameborder="0" fetchpriority="low"></iframe>
+<iframe id="ztiFrame" allow="camera *;" style="width: 97%; height: 100%; position: absolute;" title="CardJsCard" src="https://zingtree.com/deploy/tree.php?tree_id=526304251" scrolling="yes" frameborder="0" fetchpriority="low"></iframe>
 
 </body>
 <script>
 
 $(document).ready(function () {
-  console.log("Hello World!");
   
-  const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-let treeid = params.TreeId; 
-let history = params.history; 
-let notitle = params.notitle; 
-let nopermalink = params.nopermalink; 
-let agent_mode = params.agent_mode; 
-let restart = params.restart; 
-let feedback = params.feedback; 
-let domain_name = params.domain_name; 
+	const params = new Proxy(new URLSearchParams(window.location.search), {
+	  get: (searchParams, prop) => searchParams.get(prop),
+	  });
+	let treeid = params.TreeId; 
+	let history = params.history; 
+	let feedback = params.feedback; 
+	let domain_name = params.domain_name; 
 
-let url = domain_name+"deploy/tree.php?tree_id="+treeid+"&show_history="+history+"&notitle="+notitle+"&nopermalink="+nopermalink+"&agent_mode="+agent_mode+"&restart="+restart+"&feedback="+feedback
+	let url = domain_name+"deploy/tree.php?tree_id="+treeid+"&show_history="+history+"&notitle=1&nopermalink=1&agent_mode=1&restart=1&feedback="+feedback
 
-console.log("url "+url);
-document.getElementById('ztiFrame').src = url;
+	console.log("url "+url);
+	document.getElementById('ztiFrame').src = url;
 });
 
 
 </script>
 </html>
-
-
-
