@@ -20,7 +20,7 @@ $(document).ready(function () {
 	let feedback = params.feedback; 
 	let domain_name = params.domain_name; 
 
-	let url = domain_name+"deploy/tree.php?tree_id="+treeid+"&history="+history+"&notitle=1&nopermalink=1&agent_mode=1&restart=1&feedback="+feedback
+	let url = domain_name+"deploy/tree.php?tree_id="+treeid+"&show_history="+history+"&notitle=1&nopermalink=1&agent_mode=1&restart=1&feedback="+feedback
 
 	console.log("url "+url);
 	document.getElementById('ztiFrame').src = url;
